@@ -1,0 +1,15 @@
+# scratch (convention: .*.txt)
+.*.txt
+
+# os / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# node, if reference implementations land here later
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
