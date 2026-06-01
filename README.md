@@ -72,6 +72,25 @@ OEP's job is four things, none of which is "decide the spec":
    handshake). It's *how* a reconciled agreement is made tamper-evident, not *who*
    decides what's in it.
 
+What it does **not** yet solve: how a reconciled outcome becomes a *published, versioned,
+governed* standard that no one owns. That manifestation gap is the open problem below.
+
+---
+
+## The open problem — manifesting a reconciliation
+
+Reconciling two positions is one thing; turning that settlement into a **published,
+versioned, stewarded** standard that stays no one's to own is the harder, unsolved thing.
+That **manifestation gap** — and the honest admission that this project's author has the
+idea and a running reference implementation but *not* the open-standards-foundation
+experience to operationalize it — is stated plainly in **[GOVERNANCE.md](./GOVERNANCE.md)**.
+
+It's named here on purpose: the [evidence-graph](./EVIDENCE-GRAPH.md) method is to surface
+your biggest missing edge, not hide it. **Right now, standards-governance experience is the
+highest-leverage contribution to OEP — above code.** If you've worked on open-standards
+process, neutral-home/foundation operations, or spec IPR/publication, that's exactly the
+"we" this needs. [GOVERNANCE.md](./GOVERNANCE.md) is where to start.
+
 ---
 
 ## How to join — build the smallest version of it
