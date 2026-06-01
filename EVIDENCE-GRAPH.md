@@ -105,6 +105,7 @@ The validation the premise did not assume, and could not manufacture:
 | Surface | What to do | What you can check |
 |---|---|---|
 | **Human** | open [yuens.me](https://www.yuens.me), ask *"what is OEP?"*, *"what led to it?"*, *"what's the evidence for the work?"* | the answers trace back to the dated premises above |
+| **Premises** | `GET agent.yuens.me/observations?topic=OEP` — and `/observations/:id` for any one | each dated premise node, individually addressable and citable |
 | **Machine** | call the public MCP `ask_candidate` tool, or read the A2A agent-card | the same trail, agent-to-agent |
 | **Code** | read the repos — commits, tests, deploys | the implementation nodes resolve to real artifacts |
 
@@ -116,15 +117,21 @@ the live agent answers `/query` and the public MCP from, so the reasoning trail 
 examinable today by asking. That's the current "way to add an observation to the graph":
 capture it (public-eligible), and it becomes a queryable premise node the agent will cite.
 
-**The honest gap, and the build-invite.** Semantic query surfaces the reasoning but
-doesn't give each observation a *stable, linkable* citation with its date and its
-resolved evidence edges. The enhancement that closes it is a curated, read-only
-**observations surface** on the candidate-side backend — the [edge-resolver](#how-it-maps-to-what-already-exists)
-(a `/verify`-style endpoint) made browsable: one stable id per premise, its date, and the
-artifacts it stands on. That's an open contribution on `resume-agent`; until it lands,
-the curated trail above plus live queries are the examinable form. (This is the
-context-poverty gap logged 2026-04-30 — surfaced here on purpose: the graph names its
-own missing edge.)
+**The edge, now resolved.** Semantic query surfaces the reasoning but doesn't give each
+observation a *stable, linkable* citation with its date. That gap — the context-poverty
+edge logged 2026-04-30 — is now **closed**: the candidate-side backend exposes a curated,
+read-only observations surface, the [edge-resolver](#how-it-maps-to-what-already-exists)
+made browsable, one stable id per premise:
+
+```bash
+curl "https://agent.yuens.me/observations?topic=OEP&limit=5"   # the dated premise trail
+curl "https://agent.yuens.me/observations/<id>"                # one premise, individually addressable
+```
+
+Private thoughts are excluded at the same boundary as `/query`; a private or unknown id
+returns `404`. So a premise is no longer something you take on trust — it's a node you can
+fetch, cite, and check the date on. The graph named its own missing edge, and then the
+edge got built — which is the method, not a footnote.
 
 ## Why an open-ended problem needs this exact form
 
