@@ -124,13 +124,15 @@ read-only observations surface, the [edge-resolver](#how-it-maps-to-what-already
 made browsable, one stable id per premise:
 
 ```bash
-curl "https://agent.yuens.me/observations?topic=OEP&limit=5"   # the dated premise trail
+curl "https://agent.yuens.me/observations?topic=OEP&limit=5"   # the authored premise trail
 curl "https://agent.yuens.me/observations/<id>"                # one premise, individually addressable
 ```
 
-Private thoughts are excluded at the same boundary as `/query`; a private or unknown id
-returns `404`. So a premise is no longer something you take on trust — it's a node you can
-fetch, cite, and check the date on. The graph named its own missing edge, and then the
+By default this returns the **authored reasoning** (the *why* — types observation/idea/task),
+not the git-sync commit ledger (which still grounds `/query` and lives behind
+`?type=reference`). Topic matching is case-insensitive. Private thoughts are excluded at the
+same boundary as `/query`; a private or unknown id returns `404`. So a premise is no longer
+something you take on trust — it's a node you can fetch, cite, and check the date on. The graph named its own missing edge, and then the
 edge got built — which is the method, not a footnote.
 
 ## Why an open-ended problem needs this exact form
