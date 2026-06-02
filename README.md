@@ -42,7 +42,7 @@ By design, no one concern owns the protocol or profits from its friction:
 | Repo | Role | Its concern | Status |
 |---|---|---|---|
 | **[`resume-agent`](https://github.com/yuens1002/resume-agent)** + **[`resume-agent-web`](https://github.com/yuens1002/resume-agent-web)** | Candidate side — a queryable, signed agent | be seen fairly · own your data · stay sovereign and queryable | **live, open-source, forkable** |
-| **`oep-recruiter`** (role-agent) | Employer side — verified claims, not marketing copy | find real signal · verify claims · filter the noise | *the missing half — being opened up* |
+| **`employer-agent`** (role-agent) | Employer side — verified claims, not marketing copy | find real signal · verify claims · filter the noise | *the missing half — being opened up* |
 | **`oep`** (this repo) | The **reconciler** | hold both arguments · settle the net outcome · keep it no one's to own | *being opened up* |
 
 The candidate side already exists and runs. The employer side and this reconciler are
